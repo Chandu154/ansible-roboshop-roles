@@ -3,10 +3,10 @@
       src: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo 
 
-  - name: Install Mongodb
-    ansible.builtin.yum:
+ - name: Install Mongodb
+   ansible.builtin.yum:
       name: mongodb-org-shell
       state: installed
 
-  - name: load {{component}} data into mongodb
-    ansible.builtin.command: mongo --host mongodb.joindevops.store < /app/schema/{{component}}.js
+ - name: load {{component}} data into mongodb
+   ansible.builtin.command: mongo --host mongodb.joindevops.store < /app/schema/{{component}}.js

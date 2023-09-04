@@ -1,0 +1,9 @@
+# I need to refer the nodejs tasks in common folder
+# catalogue is one role
+# common is another role 
+# we need to import a task nodejs.yaml into catalogue 
+
+- name: Install Nodejs
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs

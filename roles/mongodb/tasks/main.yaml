@@ -1,4 +1,4 @@
 - name: copy mango.repo to yum.repos.d
   ansible.builtin.copy:
-    src: mongo.repo
+    src: mongodb.repo
     dest: /etc/yum.repos.d/mongo.repo
